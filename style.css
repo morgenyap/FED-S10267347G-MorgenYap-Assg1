@@ -1,355 +1,192 @@
-/* 01. MAIN PAGE */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+/* Body Styling */
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
     color: #333;
-  }
-  
-  /* Header Section */
-  header {
+    margin: 0;
+}
+
+/* Header Section */
+header {
     background-color: #ffffff;
     padding: 20px;
     border-bottom: 1px solid #ddd;
-  }
-  
-  .header-content {
+}
+
+.header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 20px;
-  }
-  
-  /* Replace logo-placeholder background with an image */
-  .logo-placeholder {
+    text-align: center;
+}
+
+.logo-placeholder {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    overflow: hidden; /* Ensures the image fits within the circular frame */
-  }
-  
-  .logo-placeholder img {
+    overflow: hidden;
+}
+
+.logo-placeholder img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image scales correctly without distortion */
-  }
-  
-  .club-details h1 {
-    font-size: 24px;
-    margin-bottom: 5px;
-  }
-  
-  .club-details p {
-    font-size: 14px;
-    margin: 2px 0;
-  }
-  
-  /* Navigation Bar */
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    object-fit: cover;
+}
+
+.club-details h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.club-details p {
+    font-size: 0.9rem;
+}
+
+/* Navigation Bar */
+nav ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
     background-color: #f2f2f2;
-    gap: 20px;
-  }
-  
-  nav ul li {
-    position: relative; /* Required for dropdown positioning */
-  }
-  
-  nav a {
+    padding: 10px;
+    gap: 15px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     padding: 10px 15px;
     display: inline-block;
     border-radius: 5px;
-    background-color: #f2f2f2; /* Background for links */
     transition: background-color 0.3s ease;
-  }
-  
-  nav a:hover {
+}
+
+nav a:hover {
     background-color: #ddd;
     color: #007BFF;
-  }
-  
-  /* Dropdown Menu Styles */
-  .dropdown-menu {
-    display: none; /* Initially hidden */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
     position: absolute;
-    top: 100%; /* Position below the parent menu item */
+    top: 100%;
     left: 0;
-    background-color: rgba(255, 255, 255, 0.95); /* Opaque dropdown with slight transparency */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
-    list-style: none;
-    padding: 10px 0; /* Spacing inside dropdown */
-    margin: 0;
-    border-radius: 5px; /* Rounded corners */
-    overflow: hidden;
-    min-width: 200px; /* Ensure dropdown menu is wide enough */
-  }
-  
-  .dropdown-menu li a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: normal;
-    background-color: transparent; /* Transparent background for individual items */
-    transition: background-color 0.3s ease;
-  }
-  
-  .dropdown-menu li a:hover {
-    background-color: #f1f1f1; /* Light grey hover */
-    color: #007BFF; /* Blue text */
-  }
-  
-  /* Show Dropdown on Hover */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  /* Add Arrow to Dropdown Text */
-  .dropdown-toggle {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* Space between text and arrow */
-  }
-  
-  .arrow-down {
-    font-size: 12px; /* Smaller font for the arrow */
-    color: #333;
-  }
-  
-  .arrow-down:hover {
-    color: #007BFF;
-  }
-  
-  /* Dropdown Menu Styles */
-  .dropdown-menu {
-    display: none; /* Initially hidden */
-    position: absolute;
-    top: 100%; /* Position below the parent menu item */
-    left: 0;
-    background-color: #ffffff; /* Fully opaque white background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
-    list-style: none;
-    padding: 0; /* Remove extra padding */
-    margin: 0;
-    border-radius: 5px; /* Rounded corners for dropdown */
-    z-index: 1000; /* Ensure dropdown is above other content */
-    min-width: 200px; /* Ensure dropdown menu is wide enough */
-  }
-  
-  .dropdown-menu li {
-    border-bottom: 1px solid #ddd; /* Divider between items */
-  }
-  
-  .dropdown-menu li:last-child {
-    border-bottom: none; /* Remove border for the last item */
-  }
-  
-  .dropdown-menu li a {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: normal;
-    background-color: transparent; /* Transparent background for individual items */
-    transition: background-color 0.3s ease;
-    z-index: 1001; /* Ensure links are clickable */
-  }
-  
-  .dropdown-menu li a:hover {
-    background-color: #f1f1f1; /* Light grey hover */
-    color: #007BFF; /* Blue text */
-  }
-  
-  /* Show Dropdown on Hover */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    z-index: 1000; /* Ensure the dropdown is on top of all elements */
-  }
-  
-  
-  /* Upcoming Events Section */
-  .events {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  /* 02. WHO WE ARE PAGE */
-  .who-we-are {
-    text-align: center; /* Centers the header and content */
-    padding: 20px;
-  }
-  
-  .who-we-are h2 {
-    font-size: 36px; /* Larger font size */
-    margin-bottom: 30px; /* Space below the header */
-  }
-  
-  .president-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers the image and text */
-    gap: 20px;
-  }
-  
-  .president-image {
-    width: 150px; /* Adjust size as needed */
-    height: 150px;
-    border-radius: 50%; /* Makes the image circular */
-    overflow: hidden;
-  }
-  
-  .president-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the image fills the circle */
-  }
-  
-  .welcome-speech {
-    font-size: 24px; /* Larger font size */
-    color: #555;
-    margin-top: 20px; /* Add space above welcome speech */
-  }
-  
-  /* Grey Box Placeholder for Speech */
-  .speech-placeholder {
-    width: 90%; /* Increase the width */
-    max-width: 1500px; /* Optional: Limit the maximum width */
-    height: 700px; /* Increase the height */
-    background-color: #e0e0e0; /* Light grey */
-    color: #555; /* Text color for placeholder */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-style: italic;
-    font-size: 16px;
-    border-radius: 10px; /* Optional rounded corners */
-    padding: 10px;
-  }
-  
-  /* General Styles */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 0;
-  }
-  
-  /* Why FoodAID Section */
-  /* Why FoodAID Section */
-  .why-foodaid {
     background-color: #ffffff;
-    padding: 40px 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 1200px;
-  }
-  
-  .why-foodaid h2 {
-    font-size: 36px;
-    color: #007BFF;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .divider {
-    width: 50px;
-    height: 4px;
-    background-color: #007BFF;
-    margin: 0 auto 20px;
-    border-radius: 2px;
-  }
-  
-  .why-foodaid p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    line-height: 1.8;
-    color: #333;
-    text-align: justify; /* For better readability */
-  }
-  
-  .content-container {
-    margin-bottom: 40px;
-  }
-  
-  /* Logo Styling */
-  .logo-container {
-    text-align: center;
-    margin-top: 30px;
-  }
-  
-  .logo-container img {
-    width: 150px;
-    height: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 5px;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+.dropdown-menu li a {
     display: block;
-    margin: 0 auto;
-  }
-  
-  
-  /* Main Committee Section */
-  .main-committee {
-    text-align: center;
-    padding: 40px 20px;
-  }
-  
-  .main-committee h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #007BFF;
-  }
-  
-  .committee-grid {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Grid Layout */
+.committee-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns layout */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     justify-content: center;
     padding: 20px;
-  }
-  
-  .member {
+}
+
+.member {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-  }
-  
-  .member-image {
+}
+
+.member-image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background-color: #ddd;
-  }
-  
-  .member-details {
+}
+
+.member-details {
     width: 120px;
     height: 50px;
     background-color: #e0e0e0;
     border-radius: 5px;
-  }
-  
-  @media (max-width: 768px) {
-    .committee-grid {
-      grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+}
+
+/* Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
     }
-  }
-  
-  @media (max-width: 480px) {
-    .committee-grid {
-      grid-template-columns: 1fr; /* Single column for mobile */
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
     }
-  }
-  
+
+    .committee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .club-details h1 {
+        font-size: 1.2rem;
+    }
+
+    .committee-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .hamburger-menu:hover {
+        background-color: #007BFF;
+    }
+}
