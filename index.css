@@ -1,0 +1,629 @@
+/* 01. MAIN PAGE */
+/* Header Section */
+header {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Header Content: Flexbox Layout */
+.header-content {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Distribute space evenly */
+  gap: 20px; /* Space between elements */
+}
+
+/* Logo Placeholder */
+.logo-placeholder {
+  flex: 0 0 auto; /* Prevent the logo from shrinking */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio of the image */
+}
+
+/* Club Details */
+.club-details {
+  flex: 1; /* Allow club details to grow and fill remaining space */
+  min-width: 200px; /* Prevent it from shrinking too much */
+  text-align: left;
+}
+
+.club-details h1 {
+  font-size: 1.5rem; /* Default size for larger screens */
+  margin: 0 0 5px 0;
+  color: #4B0076; /* Deep purple */
+}
+
+.club-details p {
+  font-size: 0.9rem;
+  margin: 2px 0;
+  color: #333;
+}
+
+
+/* Adjusting Logo and Text for Smaller Screens */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center-align content on small screens */
+  }
+
+  .logo-placeholder {
+    margin-bottom: 10px; /* Add space below the logo */
+  }
+
+  .club-details h1 {
+    font-size: 1.2rem; /* Reduce font size for smaller screens */
+  }
+
+  .club-details p {
+    font-size: 0.8rem; /* Slightly smaller text for smaller screens */
+  }
+
+  .club-details strong {
+    font-size: 0.9rem;
+  }
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Horizontal alignment */
+  justify-content: center; /* Center-align menu items */
+  gap: 20px; /* Space between items */
+}
+
+nav ul li {
+  position: relative; /* Required for dropdown positioning */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f2f2f2; /* Background for links */
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #4B0076; /* Deep purple background on hover */
+  color: #fff; /* White text color on hover */
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%; /* Position below the parent menu item */
+  left: 0;
+  background-color: #ffffff; /* White background for dropdown */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+  list-style: none;
+  padding: 10px 0; /* Spacing inside dropdown */
+  margin: 0;
+  border-radius: 5px; /* Rounded corners for dropdown */
+  overflow: hidden;
+  min-width: 200px; /* Ensure dropdown menu is wide enough */
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333; /* Black text */
+  font-weight: normal;
+  background-color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1; /* Light grey hover */
+  color: #007BFF; /* Blue text */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+/* Carousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px; /* Adjust maximum width of the carousel */
+  height: 400px; /* Set a consistent height for the carousel */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-item {
+  min-width: 100%;
+  height: 100%; /* Ensure each slide occupies full height */
+  position: relative;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%; /* Maintain full height for images */
+  object-fit: cover; /* Ensures images are not distorted */
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4); /* Slightly transparent black */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 50%;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-control:hover {
+  background: rgba(0, 0, 0, 0.6); /* Darker background on hover */
+  transform: translateY(-50%) scale(1.1); /* Slight zoom effect */
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+.carousel-control i {
+  font-size: 16px;
+  line-height: 1;
+  display: inline-block;
+}
+
+/* Dots Container */
+.carousel-dots {
+  position: absolute;
+  bottom: 15px; /* Position at the bottom of the carousel */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+.carousel-dots .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-dots .dot.active {
+  background-color: #fff;
+}
+
+
+/* FoodAID Calendar Section */
+#foodAID-calendar {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #4B0076; /* Deep purple background */
+  border: 2px solid #6A0DAD; /* Lighter purple border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+  max-width: 1200px; /* Limit width */
+  text-align: center; /* Center-align content */
+  color: #EAEAEA; /* Light grey text */
+}
+
+/* Calendar Heading */
+#foodAID-calendar h2 {
+  color: #EAEAEA; /* Light grey text */
+  font-size: 2rem; /* Slightly larger heading */
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Make the heading stand out */
+}
+
+/* Subtitle Below Heading */
+#foodAID-calendar p {
+  color: #B8B8B8; /* Subtle grey for subtitle */
+  font-size: 1rem; /* Smaller font size for the subtitle */
+  margin-bottom: 20px;
+}
+
+/* Calendar Styling */
+#calendar {
+  background-color: #F5F5F5; /* Light grey background for the calendar */
+  border-radius: 8px; /* Smooth edges */
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+  color: #333; /* Standard text color for the calendar */
+}
+
+/* Calendar Header (Month/Navigation Buttons) */
+.fc-toolbar {
+  background-color: #6A0DAD; /* Lighter purple for toolbar */
+  color: #fff; /* White text */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Calendar Day Names (Sun, Mon, etc.) */
+.fc-col-header-cell {
+  background-color: #4B0076; /* Deep purple for day headers */
+  color: #EAEAEA; /* Light grey text */
+  padding: 10px;
+  border-radius: 5px 5px 0 0; /* Round top edges */
+}
+
+/* Calendar Cells */
+.fc-daygrid-day {
+  background-color: #FFF; /* White cells for contrast */
+  color: #333; /* Black text */
+  border: 1px solid #DDD; /* Light grey borders */
+}
+
+/* Calendar Events */
+.fc-event {
+  background-color: #6A0DAD; /* Lighter purple for events */
+  color: #FFF; /* White text */
+  border-radius: 5px; /* Rounded corners for events */
+  font-size: 0.9rem; /* Slightly smaller text */
+  padding: 2px 5px; /* Add some padding */
+}
+
+/* Calendar Event Hover */
+.fc-event:hover {
+  background-color: #4B0076; /* Deep purple on hover */
+  color: #FFF; /* Ensure text remains white */
+  cursor: pointer;
+}
+
+/* Calendar Navigation Buttons */
+.fc-button {
+  background-color: #6A0DAD; /* Lighter purple buttons */
+  color: #FFF; /* White text */
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.fc-button:hover {
+  background-color: #4B0076; /* Deep purple on hover */
+}
+
+/* Calendar 'Today' Button */
+.fc-button-primary {
+  background-color: #333; /* Black for 'Today' button */
+  color: #FFF; /* White text */
+}
+
+.fc-button-primary:hover {
+  background-color: #6A0DAD; /* Lighter purple hover */
+}
+
+/* General cell layout */
+.fc-daygrid-day-frame {
+  position: relative; /* Enables positioning of child elements */
+  padding: 5px;
+  display: flex;
+  flex-direction: column; /* Stacks child elements vertically */
+  align-items: flex-start; /* Align items to the start */
+  height: 100%; /* Full height for layout consistency */
+}
+
+/* Date number positioning */
+.fc-daygrid-day-top {
+  z-index: 1; /* Keep it on top of other elements */
+  align-self: flex-start; /* Align to the top-left */
+  font-size: 14px; /* Adjust size */
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px; /* Add spacing below the date */
+}
+
+/* Events positioning */
+.fc-daygrid-day-events {
+  z-index: 0; /* Ensure events are below the date number */
+  margin-top: auto; /* Start events below the date number */
+  width: 100%; /* Full width for events */
+}
+
+/* Event styling */
+.fc-event {
+  font-size: 0.8rem;
+  padding: 5px;
+  border-radius: 3px;
+  text-align: left;
+  color: #fff;
+  background-color: #4B0076; /* Default event color */
+  margin: 5px 0; /* Space between events */
+  /* Overflow handling */
+  overflow: hidden; /* Hides overflowing text */
+  text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  max-width: 100%; /* Ensures the event fits within the cell */
+}
+
+
+/* Optional: Add hover effect for better user experience */
+.fc-daygrid-day:hover {
+  background-color: #f9f9f9; /* Subtle background change on hover */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .fc-event {
+    font-size: 0.7rem; /* Slightly smaller font size for events */
+    padding: 3px; /* Reduce padding for smaller screens */
+  }
+
+  .fc-daygrid-day-top {
+    font-size: 12px; /* Smaller date number on mobile */
+  }
+}
+
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%; /* Position below the parent menu item */
+  left: 0;
+  background-color: #ffffff; /* White background for dropdown */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+  list-style: none;
+  padding: 10px 0; /* Spacing inside dropdown */
+  margin: 0;
+  border-radius: 5px; /* Rounded corners for dropdown */
+  overflow: hidden;
+  min-width: 200px; /* Ensure dropdown menu is wide enough */
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #ddd; /* Divider between items */
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  background-color: transparent; /* Transparent background for individual items */
+  transition: background-color 0.3s ease;
+  z-index: 1001; /* Ensure links are clickable */
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1; /* Light grey hover */
+  color: #007BFF; /* Blue text */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  z-index: 1000; /* Ensure the dropdown is on top of all elements */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+}
+
+/* Keyframes for Scrolling Effect */
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .image-carousel {
+      height: 250px; /* Reduce height for smaller screens */
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Contact Us Section */
+/* General Container Styles */
+.container {
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Input and Form Styling */
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #007BFF;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: #0056b3;
+}
+
+/* Row and Column Styling */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Contact Us Section Enhancements */
+.contact-section .pdpa-note {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px; /* Adds gap below the PDPA note */
+}
+
+.contact-section form {
+  margin-top: 20px; /* Ensures a gap between the PDPA note and the form */
+}
+
+/* Style for Contact Us Heading */
+.contact-section h2 {
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  text-align: center; /* Center align the text */
+  color: #333; /* Optional: Set a custom color */
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.contact-section .column img {
+  width: 100%; /* Adjust image to fill its column */
+  max-width: 500px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the image */
+  border-radius: 8px; /* Add rounded corners */
+}
+
+.contact-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between columns */
+}
+
+.contact-section .column {
+  flex: 1; /* Make both columns take equal space */
+  min-width: 300px; /* Prevent columns from shrinking too much */
+}
+
+/* Headings and Text Centering */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+#savedResponses {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#savedResponses h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#savedResponses ul {
+  list-style: none;
+  padding: 0;
+}
+
+#savedResponses li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#savedResponses li button {
+  margin-top: 5px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#savedResponses li button:hover {
+  background-color: #cc0000;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333; /* Black footer */
+  color: #EAEAEA; /* Light grey text */
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}

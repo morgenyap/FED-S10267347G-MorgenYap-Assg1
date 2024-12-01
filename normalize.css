@@ -1,0 +1,91 @@
+/* Reset margins and paddings */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Set the base box-sizing to ensure consistent sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Set body styles for consistent typography */
+body {
+  line-height: 1;
+  font-family: Arial, sans-serif;
+  color: #333; /* Default text color */
+  background-color: #f4f4f4; /* Default background color */
+}
+
+/* Remove list styles */
+ol, ul {
+  list-style: none;
+}
+
+/* Ensure links don't have underlines by default */
+a {
+  text-decoration: none;
+  color: inherit; /* Inherits color from parent element */
+}
+
+/* Table defaults */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Image responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Form input resets */
+input, textarea, select, button {
+  font: inherit; /* Inherit font styles from parent */
+  margin: 0; /* Remove default margin */
+  padding: 0;
+  border: none;
+  outline: none; /* Remove focus outlines */
+  appearance: none; /* Remove OS-specific styling */
+}
+
+/* Reset button styling */
+button {
+  background: none;
+  cursor: pointer;
+}
+
+/* Set consistent height and width for iframe */
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  margin-top: 30px; /* Add uniform spacing above each section */
+}

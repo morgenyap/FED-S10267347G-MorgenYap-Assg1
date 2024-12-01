@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodAID Club - Home</title>
+
+  <!-- Link to the single CSS file -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="index.css">
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <div class="logo-placeholder">
+        <a href="index.html">
+          <img src="assets/foodaidlogo.png" alt="FoodAID Club Logo">
+        </a>
+      </div>
+      <div class="club-details">
+        <h1><strong>FoodAID Club</strong></h1>
+        <strong>"One Small Community, One Big Heart❤️"</strong>
+        <p>CCA Club ID: 00000049</p>
+        <p>📧 Enquiry: <a href="mailto:cca_foodaid@connect.np.edu.sg">cca_foodaid@connect.np.edu.sg</a></p>
+        <p>🏠 Clubroom: 73-01-24 (Munch Block)</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+<div class="nav-container">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle">
+          Who We Are <span class="arrow-down">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="history.html">Our History</a></li>
+          <li><a href="foodaidintro.html">Why FoodAID?</a></li>
+          <li><a href="president-welcome.html">President's Welcome Message</a></li>
+          <li><a href="main-committee.html">Main Committee AY23/24</a></li>
+          <li><a href="our-events.html">Our Events</a></li>
+        </ul>
+      </li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="pr-and-media.html">PR & Media</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="our-partners.html">Our Partners</a></li>
+    </ul>
+  </nav>
+</div>
+
+  <!-- Carousel -->
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/carousel/imgcarou1.png" alt="Intro Image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/carousel/imgcarou2.png" alt="Intro Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/carousel/imgcarou3.png" alt="Intro Image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/carousel/imgcarou4.png" alt="Intro Image 4">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/carousel/imgcarou5.png" alt="Intro Image 5">
+      </div>
+    </div>
+    <!-- Arrows -->
+    <button class="carousel-control prev" id="prevArrow">&#10094;</button>
+    <button class="carousel-control next" id="nextArrow">&#10095;</button>
+    <!-- Dots -->
+    <div class="carousel-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- FoodAID Calendar Section (Now Second Section) -->
+  <section id="foodAID-calendar">
+    <h2>FoodAID Calendar</h2>
+    <p>Stay updated on our upcoming events and initiatives!</p>
+    <div id="calendar"></div>
+  </section>
+
+  <!-- Contact Us Section -->
+  <div class="contact-section">
+    <div class="container">
+      <div style="text-align:center">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Send us a message :)</p>
+        <p class="pdpa-note">Please note that due to PDPA regulations, all responses will be safely discarded by the end of 7 days.</p>
+      </div>
+      <div class="row">
+        <!-- Column for the Image -->
+        <div class="column">
+          <img src="assets/contact-us/contactusimg.png" alt="totoro_img" style="width:100%; border-radius: 8px;">
+        </div>
+        <!-- Column for the Form -->
+        <div class="column">
+          <form action="#" method="POST">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
+            
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address..." required>
+            
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write your message here..." style="height:170px" required></textarea>
+            
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+      <div id="savedResponses">
+        <h3>Saved Responses</h3>
+        <ul id="responsesList"></ul>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2024, Morgen Yap on behalf of FoodAID Club. All Rights Reserved.</p>
+  </footer>
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

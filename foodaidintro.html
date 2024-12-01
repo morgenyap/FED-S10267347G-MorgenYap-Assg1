@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodAID Club - WhyFoodAID</title>
+
+  <!-- Link to the single CSS file -->
+  <link rel="stylesheet" href="normalize.css">
+
+  <link rel="stylesheet" href="foodaidintro.css">  
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <div class="logo-placeholder">
+        <a href="index.html">
+          <img src="assets/foodaidlogo.png" alt="FoodAID Club Logo">
+        </a>
+      </div>
+      <div class="club-details">
+        <h1>FoodAID Club</h1>
+        <strong>"One Small Community, One Big Heart❤️"</strong>
+        <p>CCA Club ID: 00000049</p>
+        <p>📧 Enquiry: <a href="mailto:cca_foodaid@connect.np.edu.sg">cca_foodaid@connect.np.edu.sg</a></p>
+        <p>🏠 Clubroom: 73-01-24 (Munch Block)</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle">
+          Who We Are <span class="arrow-down">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="history.html">Our History</a></li>
+          <li><a href="foodaidintro.html">Why FoodAID?</a></li>
+          <li><a href="president-welcome.html">President's Welcome Message</a></li>
+          <li><a href="main-committee.html">Main Committee AY23/24</a></li>
+          <li><a href="our-events.html">Our Events</a></li>
+        </ul>
+      </li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="pr-and-media.html">PR & Media</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="our-partners.html">Our Partners</a></li>
+    </ul>
+  </nav>
+
+  <section class="why-foodaid">
+    <div class="why-foodaid-container">
+      <div class="why-foodaid-text">
+        <h2>Why FoodAID?</h2>
+        <p>
+          Established in <strong>2015</strong>, FoodAID Club is dedicated to making a meaningful impact within our community by addressing food sustainability challenges. 
+          Over the years, our mission has been to combat food wastage, alleviate hunger, and foster a sense of unity and compassion. 
+          We aim to inspire change, raise awareness about food sustainability, and support those in need through our initiatives. Here's why joining FoodAID matters:
+        </p>
+        <ul>
+          <li><strong>Community Impact:</strong> Help distribute food to those in need, bring smiles to their faces, and make a tangible difference in their lives.</li>
+          <li><strong>Sustainability:</strong> Play an active role in reducing food wastage and promoting environmentally conscious, eco-friendly practices within the community.</li>
+          <li><strong>Skill Development:</strong> Gain valuable hands-on experience in organizing events, coordinating efforts, and volunteering as part of a dynamic and supportive team.</li>
+          <li><strong>Friendship:</strong> Build lifelong connections with like-minded individuals who share a passion for giving back, creating bonds that go beyond the club's activities.</li>
+          <li><strong>Leadership:</strong> Take on opportunities to lead, inspire, and innovate within a team setting, empowering yourself and others for a better tomorrow.</li>
+        </ul>
+      </div>
+      <div class="why-foodaid-image">
+        <img src="assets/foodaidlogo.png" alt="FoodAID Club Logo">
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Contact Us Section -->
+  <div class="contact-section">
+    <div class="container">
+      <div style="text-align:center">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Send us a message :)</p>
+        <p class="pdpa-note">Please note that due to PDPA regulations, all responses will be safely discarded by the end of 7 days.</p>
+      </div>
+      <div class="row">
+        <!-- Column for the Image -->
+        <div class="column">
+          <img src="assets/contact-us/contactusimg.png" alt="totoro_img" style="width:100%; border-radius: 8px;">
+        </div>
+        <!-- Column for the Form -->
+        <div class="column">
+          <form action="#" method="POST">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
+            
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address..." required>
+            
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write your message here..." style="height:170px" required></textarea>
+            
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+      <div id="savedResponses">
+        <h3>Saved Responses</h3>
+        <ul id="responsesList"></ul>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2024, Morgen Yap on behalf of FoodAID Club. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

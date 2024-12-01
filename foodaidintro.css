@@ -1,0 +1,384 @@
+/* 01. MAIN PAGE */
+/* Header Section */
+header {
+  background-color: #fff; /* White background */
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Header Content: Flexbox Layout */
+.header-content {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Distribute space evenly */
+  gap: 20px; /* Space between elements */
+}
+
+/* Logo Placeholder */
+.logo-placeholder {
+  flex: 0 0 auto; /* Prevent the logo from shrinking */
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio of the image */
+}
+
+/* Club Details */
+.club-details {
+  flex: 1; /* Allow club details to grow and fill remaining space */
+  min-width: 200px; /* Prevent it from shrinking too much */
+  text-align: left;
+}
+
+.club-details h1 {
+  font-size: 1.5rem; /* Default size for larger screens */
+  margin: 0 0 5px 0;
+  color: #4B0076; /* Deep purple */
+}
+
+.club-details p {
+  font-size: 0.9rem;
+  margin: 2px 0;
+  color: #333;
+}
+
+/* Adjusting Logo and Text for Smaller Screens */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Center-align content on small screens */
+  }
+
+  .logo-placeholder {
+    margin-bottom: 10px; /* Add space below the logo */
+  }
+
+  .club-details h1 {
+    font-size: 1.2rem; /* Reduce font size for smaller screens */
+  }
+
+  .club-details p {
+    font-size: 0.8rem; /* Slightly smaller text for smaller screens */
+  }
+
+  .club-details strong {
+    font-size: 0.9rem;
+  }
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #f2f2f2; /* Light grey background */
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333; /* Default text color */
+  font-weight: bold;
+  padding: 10px 15px;
+  display: inline-block;
+  border-radius: 5px;
+  background-color: #f2f2f2; /* Default background color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+  background-color: #4B0076; /* Deep purple background on hover */
+  color: #fff; /* White text color on hover */
+}
+
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%; /* Position below the parent menu item */
+  left: 0;
+  background-color: #ffffff; /* White background for dropdown */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+  list-style: none;
+  padding: 10px 0; /* Spacing inside dropdown */
+  margin: 0;
+  border-radius: 5px; /* Rounded corners for dropdown */
+  overflow: hidden;
+  min-width: 200px; /* Ensure dropdown menu is wide enough */
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #ddd; /* Divider between items */
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  background-color: transparent; /* Transparent background for individual items */
+  transition: background-color 0.3s ease;
+  z-index: 1001; /* Ensure links are clickable */
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1; /* Light grey hover */
+  color: #007BFF; /* Blue text */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  z-index: 1000; /* Ensure the dropdown is on top of all elements */
+}
+
+.why-foodaid {
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 1200px;
+  background-color: #fff; /* White background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.why-foodaid-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.why-foodaid-text {
+  flex: 1;
+  padding: 10px;
+}
+
+.why-foodaid-text h2 {
+  color: #4B0076; /* Deep purple */
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.why-foodaid-text p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.why-foodaid-text ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: #333;
+}
+
+.why-foodaid-text li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.why-foodaid-image {
+  flex: 0 0 300px;
+  max-width: 300px;
+}
+
+.why-foodaid-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow to the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-foodaid-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-foodaid-image {
+    margin-top: 20px;
+  }
+}
+
+/* Contact Us Section */
+/* General Container Styles */
+.container {
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* Input and Form Styling */
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #007BFF;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type=submit]:hover {
+  background-color: #0056b3;
+}
+
+/* Row and Column Styling */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* Contact Us Section Enhancements */
+.contact-section .pdpa-note {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px; /* Adds gap below the PDPA note */
+}
+
+.contact-section form {
+  margin-top: 20px; /* Ensures a gap between the PDPA note and the form */
+}
+
+/* Style for Contact Us Heading */
+.contact-section h2 {
+  font-size: 2.5rem; /* Increase font size */
+  font-weight: bold; /* Make it bold */
+  text-align: center; /* Center align the text */
+  color: #333; /* Optional: Set a custom color */
+  margin-bottom: 20px; /* Add spacing below the heading */
+}
+
+.contact-section .column img {
+  width: 100%; /* Adjust image to fill its column */
+  max-width: 500px; /* Limit the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+  margin: 0 auto; /* Center the image */
+  border-radius: 8px; /* Add rounded corners */
+}
+
+.contact-section .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* Align items vertically */
+  gap: 20px; /* Space between columns */
+}
+
+.contact-section .column {
+  flex: 1; /* Make both columns take equal space */
+  min-width: 300px; /* Prevent columns from shrinking too much */
+}
+
+/* Headings and Text Centering */
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+#savedResponses {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+#savedResponses h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+#savedResponses ul {
+  list-style: none;
+  padding: 0;
+}
+
+#savedResponses li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#savedResponses li button {
+  margin-top: 5px;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#savedResponses li button:hover {
+  background-color: #cc0000;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333; /* Black footer */
+  color: #EAEAEA; /* Light grey text */
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
