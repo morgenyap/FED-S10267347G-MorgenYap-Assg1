@@ -619,6 +619,116 @@ footer p {
   background-color: #cc0000;
 }
 
+/* Success Page Layout */
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: calc(100vh - 150px); /* Subtract header height */
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Success Page Layout */
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center */
+  align-items: center; /* Horizontally center */
+  min-height: calc(100vh - 150px); /* Subtract header height */
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.success-box {
+  background-color: #fff;
+  padding: 30px 20px; /* Adjust padding for better proportions */
+  border-radius: 15px; /* Rounder corners */
+  text-align: center; /* Center-align all content */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  animation: slideDown 0.8s ease-in-out; /* Slide down animation */
+  max-width: 400px; /* Restrict box width for tighter alignment */
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align image and text */
+  gap: 15px; /* Uniform spacing between elements */
+}
+
+.success-box img {
+  width: 100%;
+  max-width: 200px; /* Reduce image size slightly */
+  height: auto;
+  border-radius: 10px; /* Optional: Rounded corners for the image */
+}
+
+.success-box h1 {
+  font-size: 1.8rem;
+  margin: 0; /* Remove extra margin */
+  color: #4B0076;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between emojis and text */
+}
+
+.success-box p {
+  margin: 5px;
+  margin-bottom: 15px; /* Reduce spacing below the text */
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.4; /* Slightly tighter line spacing */
+}
+
+.success-box button {
+  background-color: #4B0076;
+  color: white;
+  border: none;
+  padding: 12px 25px; /* Larger button */
+  font-size: 1rem;
+  border-radius: 8px; /* Rounder button */
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.success-box button:hover {
+  background-color: #6A0DAD;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #EAEAEA;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%;
+  position: relative;
+}
+
+/* Ensure Footer Stays at Bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the body take the full height of the viewport */
+}
+
 /* Footer Styling */
 footer {
   background-color: #333; /* Black footer */
@@ -626,4 +736,16 @@ footer {
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

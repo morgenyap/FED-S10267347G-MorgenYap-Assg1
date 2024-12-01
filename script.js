@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
       { title: "Food Rescue #5", start: "2024-07-28", color: "#FFC107", url: "assets/posters/food-rescue5.png"},
       { title: "Food Rescue #6", start: "2024-07-28", color: "#FFC107", url: "assets/posters/food-rescue6.png"},
       { title: "Food Rescue #7", start: "2024-09-29", color: "#FFC107", url: "assets/posters/food-rescue7.png"},
+      { title: "Food Rescue #8", start: "2024-12-29", color: "#FFC107"},
 
       // Recruitment Events
       { title: "Start of GM & GL Recruitment", start: "2024-04-29", color: "#FF0000", url: "assets/posters/gmgl.png"},
@@ -115,7 +116,8 @@ document.addEventListener("DOMContentLoaded", function () {
       { title: "Hippo Transylvania", start: "2024-10-03", colors: "#4B0076", url:"assets/posters/hippo-transylvania.png" },
       { title: "HRHS Food Distribution #1", start: "2024-09-07", colors: "#4B0076", url:"assets/posters/hrhs-food-dist-1.png"},
       { title: "Turning Flaws into Fresh Finds", start: "2024-11-16", color: "#FFC5D3", url:"assets/posters/turning-flaws-into-fresh-finds1.png"},
-      { title: "Merry Baking Xmas", start: "2024-11-21", color: "#FF0000", url:"assets/posters/merry-baking-xmas.jpg" },
+      { title: "Merry Baking Xmas", start: "2024-11-21", color: "#FF0000", url:"assets/posters/merry-baking-xmas.jpg"},
+      { title: "Main Committee Stepdown", start: "2025-01-03", color: "#FF0000"},
     ],
 
     

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodAID Club - Home</title>
+
+  <!-- Link to the single CSS file -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="index.css">
+
+  <!-- FullCalendar CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <div class="logo-placeholder">
+        <a href="index.html">
+          <img src="assets/foodaidlogo.png" alt="FoodAID Club Logo">
+        </a>
+      </div>
+      <div class="club-details">
+        <h1><strong>FoodAID Club</strong></h1>
+        <strong>"One Small Community, One Big Heart❤️"</strong>
+        <p>CCA Club ID: 00000049</p>
+        <p>📧 Enquiry: <a href="mailto:cca_foodaid@connect.np.edu.sg">cca_foodaid@connect.np.edu.sg</a></p>
+        <p>🏠 Clubroom: 73-01-24 (Munch Block)</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+<div class="nav-container">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle">
+          Who We Are <span class="arrow-down">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="history.html">Our History</a></li>
+          <li><a href="foodaidintro.html">Why FoodAID?</a></li>
+          <li><a href="president-welcome.html">President's Welcome Message</a></li>
+          <li><a href="main-committee.html">Main Committee AY23/24</a></li>
+          <li><a href="our-events.html">Our Events</a></li>
+        </ul>
+      </li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="pr-and-media.html">PR & Media</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="our-partners.html">Our Partners</a></li>
+    </ul>
+  </nav>
+</div>
+
+  <!-- Success Section -->
+  <main>
+    <div class="success-container">
+      <div class="success-box">
+        <h1>🎉 Successful Submission!</h1>
+        <img src="assets/ponyo_thankyou.png" alt="Thank You Image">
+        <p>Thank you for contacting us.</p>
+        <p>We will get back to you shortly.</p>
+        <button onclick="location.href='index.html'">Return to Home</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2024, Morgen Yap on behalf of FoodAID Club. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function returnToHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
