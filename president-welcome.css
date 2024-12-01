@@ -76,7 +76,15 @@ header {
 /* Navigation Bar */
 nav {
   background-color: #f2f2f2;
-  padding: 10px;
+  margin: 0; /* Remove any margin */
+  padding: 10px 0; /* Add appropriate padding */
+  border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
+}
+
+/* Ensure the next section starts immediately after the navigation bar */
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
 nav ul {
