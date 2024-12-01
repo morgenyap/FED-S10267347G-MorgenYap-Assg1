@@ -76,7 +76,7 @@ header {
 /* Navigation Bar */
 nav {
   background-color: #f2f2f2;
-  margin: 0; /* Remove any margin */
+  margin-bottom: 20px; /* Creates a gap between the nav and the carousel */
   padding: 10px 0; /* Add appropriate padding */
   border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
 }

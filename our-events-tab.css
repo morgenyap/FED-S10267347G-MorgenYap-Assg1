@@ -49,6 +49,7 @@ header {
   color: #333;
 }
 
+
 /* Adjusting Logo and Text for Smaller Screens */
 @media (max-width: 768px) {
   .header-content {
@@ -76,9 +77,9 @@ header {
 /* Navigation Bar */
 nav {
   background-color: #f2f2f2;
+  margin: 0; /* Remove any margin */
   padding: 10px 0; /* Add appropriate padding */
   border-bottom: 1px solid #ddd; /* Optional: Add a border for separation */
-  margin-bottom: 20px; /* Creates a gap between the nav and the carousel */
 }
 
 /* Ensure the next section starts immediately after the navigation bar */
@@ -89,33 +90,32 @@ body, html {
 
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Horizontal alignment */
+  justify-content: center; /* Center-align menu items */
+  gap: 20px; /* Space between items */
 }
 
 nav ul li {
-  position: relative;
+  position: relative; /* Required for dropdown positioning */
 }
 
 nav a {
   text-decoration: none;
-  color: #333; /* Default text color */
+  color: #333;
   font-weight: bold;
   padding: 10px 15px;
   display: inline-block;
-  border-radius: 5px;
-  background-color: #f2f2f2; /* Default background color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #f2f2f2; /* Background for links */
+  transition: background-color 0.3s ease;
 }
 
 nav a:hover {
   background-color: #4B0076; /* Deep purple background on hover */
   color: #fff; /* White text color on hover */
 }
-
 
 /* Dropdown Menu Styles */
 .dropdown-menu {
@@ -131,25 +131,17 @@ nav a:hover {
   border-radius: 5px; /* Rounded corners for dropdown */
   overflow: hidden;
   min-width: 200px; /* Ensure dropdown menu is wide enough */
-}
-
-.dropdown-menu li {
-  border-bottom: 1px solid #ddd; /* Divider between items */
-}
-
-.dropdown-menu li:last-child {
-  border-bottom: none; /* Remove border for the last item */
+  z-index: 20; /* Ensure it appears over images and other content */
 }
 
 .dropdown-menu li a {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #333;
+  color: #333; /* Black text */
   font-weight: normal;
-  background-color: transparent; /* Transparent background for individual items */
+  background-color: #ffffff;
   transition: background-color 0.3s ease;
-  z-index: 1001; /* Ensure links are clickable */
 }
 
 .dropdown-menu li a:hover {
@@ -160,88 +152,106 @@ nav a:hover {
 /* Show Dropdown on Hover */
 .dropdown:hover .dropdown-menu {
   display: block;
-  z-index: 1000; /* Ensure the dropdown is on top of all elements */
 }
 
-.why-foodaid {
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 1200px;
-  background-color: #fff; /* White background */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+/* Our Events Section */
+#our-events {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
 }
 
-.why-foodaid-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.why-foodaid-text {
-  flex: 1;
-  padding: 10px;
-}
-
-.why-foodaid-text h2 {
-  color: #4B0076; /* Deep purple */
+#our-events h2 {
   font-size: 2rem;
+  color: #4B0076;
   margin-bottom: 10px;
 }
 
-.why-foodaid-text p {
-  color: #333;
+#our-events p {
   font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+/* Events Tabs Styling */
+.events-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.event-tab {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.event-tab:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.event-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   margin-bottom: 15px;
-  line-height: 1.6;
 }
 
-.why-foodaid-text ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  color: #333;
-}
-
-.why-foodaid-text li {
+/* Event Content */
+.event-content h3 {
+  font-size: 1.5rem;
+  color: #4B0076;
   margin-bottom: 10px;
+}
+
+.event-content p {
   font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
   line-height: 1.5;
 }
 
-.why-foodaid-image {
-  flex: 0 0 300px;
-  max-width: 300px;
+/* Find Out More Button */
+.find-out-more {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #4B0076;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.why-foodaid-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow to the image */
+.find-out-more:hover {
+  background-color: #6A008C;
+  transform: scale(1.05);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .why-foodaid-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .why-foodaid-image {
-    margin-top: 20px;
-  }
+.find-out-more:active {
+  transform: scale(0.95);
 }
 
 /* Contact Us Section */
 /* General Container Styles */
+
 .container {
   border-radius: 8px;
   background-color: #f9f9f9;
   padding: 20px;
   max-width: 1500px;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 /* Input and Form Styling */
@@ -381,6 +391,116 @@ footer p {
   background-color: #cc0000;
 }
 
+/* Success Page Layout */
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  min-height: calc(100vh - 150px); /* Subtract header height */
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Success Page Layout */
+.success-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center */
+  align-items: center; /* Horizontally center */
+  min-height: calc(100vh - 150px); /* Subtract header height */
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.success-box {
+  background-color: #fff;
+  padding: 30px 20px; /* Adjust padding for better proportions */
+  border-radius: 15px; /* Rounder corners */
+  text-align: center; /* Center-align all content */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  animation: slideDown 0.8s ease-in-out; /* Slide down animation */
+  max-width: 400px; /* Restrict box width for tighter alignment */
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align image and text */
+  gap: 15px; /* Uniform spacing between elements */
+}
+
+.success-box img {
+  width: 100%;
+  max-width: 200px; /* Reduce image size slightly */
+  height: auto;
+  border-radius: 10px; /* Optional: Rounded corners for the image */
+}
+
+.success-box h1 {
+  font-size: 1.8rem;
+  margin: 0; /* Remove extra margin */
+  color: #4B0076;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between emojis and text */
+}
+
+.success-box p {
+  margin: 5px;
+  margin-bottom: 15px; /* Reduce spacing below the text */
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.4; /* Slightly tighter line spacing */
+}
+
+.success-box button {
+  background-color: #4B0076;
+  color: white;
+  border: none;
+  padding: 12px 25px; /* Larger button */
+  font-size: 1rem;
+  border-radius: 8px; /* Rounder button */
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.success-box button:hover {
+  background-color: #6A0DAD;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #EAEAEA;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%;
+  position: relative;
+}
+
+/* Ensure Footer Stays at Bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Make the body take the full height of the viewport */
+}
+
 /* Footer Styling */
 footer {
   background-color: #333; /* Black footer */
@@ -388,4 +508,16 @@ footer {
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

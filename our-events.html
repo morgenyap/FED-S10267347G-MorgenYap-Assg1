@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodAID Club - Home</title>
+
+  <!-- Link to the single CSS file -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="our-events-tab.css">
+
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="header-content">
+      <div class="logo-placeholder">
+        <a href="index.html">
+          <img src="assets/foodaidlogo.png" alt="FoodAID Club Logo">
+        </a>
+      </div>
+      <div class="club-details">
+        <h1><strong>FoodAID Club</strong></h1>
+        <strong>"One Small Community, One Big Heart❤️"</strong>
+        <p>CCA Club ID: 00000049</p>
+        <p>📧 Enquiry: <a href="mailto:cca_foodaid@connect.np.edu.sg">cca_foodaid@connect.np.edu.sg</a></p>
+        <p>🏠 Clubroom: 73-01-24 (Munch Block)</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+<div class="nav-container">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle">
+          Who We Are <span class="arrow-down">&#9662;</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="history.html">Our History</a></li>
+          <li><a href="foodaidintro.html">Why FoodAID?</a></li>
+          <li><a href="president-welcome.html">President's Welcome Message</a></li>
+          <li><a href="main-committee.html">Main Committee AY23/24</a></li>
+          <li><a href="our-events.html">Our Events</a></li>
+        </ul>
+      </li>
+      <li><a href="who-we-serve.html">Who We Serve</a></li>
+      <li><a href="pr-and-media.html">PR & Media</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="our-partners.html">Our Partners</a></li>
+    </ul>
+  </nav>
+</div>
+
+<section id="our-events">
+  <div class="events-container">
+    <h2>Our Staple Events</h2>
+    <p>Learn more about the three main events that drive FoodAID's mission to serve the community.</p>
+
+    <div class="events-tabs">
+      <!-- Tab 1: Project 100=50 -->
+      <div class="event-tab">
+        <div class="event-image">
+          <img src="assets/our-events/ourevents-proj10050.png" alt="Project 100=50">
+        </div>
+        <div class="event-content">
+          <h3>Project 100=50</h3>
+          <p>Providing meals to low-income families and ensuring food accessibility for everyone.</p>
+          <a href="our-events-proj10050.html" class="find-out-more">Tap to Find Out More</a>
+        </div>
+      </div>
+
+      <!-- Tab 2: Food Donation Drive -->
+      <div class="event-tab">
+        <div class="event-image">
+          <img src="assets/our-events/ourevents-fdd.png" alt="Food Donation Drive">
+        </div>
+        <div class="event-content">
+          <h3>Food Donation Drive</h3>
+          <p>Collecting and distributing essential food supplies to support struggling families in need.</p>
+          <a href="our-events-fdd.html" class="find-out-more">Tap to Find Out More</a>
+        </div>
+      </div>
+
+      <!-- Tab 3: Food Rescue -->
+      <div class="event-tab">
+        <div class="event-image">
+          <img src="assets/our-events/ourevents-foodrescue.png" alt="Food Rescue">
+        </div>
+        <div class="event-content">
+          <h3>Food Rescue</h3>
+          <p>Partnering with organizations to reduce food waste by redistributing excess food to the underprivileged.</p>
+          <a href="our-events-fr.html" class="find-out-more">Tap to Find Out More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Us Section -->
+  <div class="contact-section">
+    <div class="container">
+      <div style="text-align:center">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! Send us a message :)</p>
+        <p class="pdpa-note">Please note that due to PDPA regulations, all responses will be safely discarded by the end of 7 days.</p>
+      </div>
+      <div class="row">
+        <!-- Column for the Image -->
+        <div class="column">
+          <img src="assets/contact-us/contactusimg.png" alt="totoro_img" style="width:100%; border-radius: 8px;">
+        </div>
+        <!-- Column for the Form -->
+        <div class="column">
+          <form id="userForm" action="successful.html" method="get">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your first name..." required>
+            
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address..." required>
+            
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write your message here..." style="height:170px" required></textarea>
+            
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2024, Morgen Yap on behalf of FoodAID Club. All Rights Reserved.</p>
+  </footer>
+
+  <!-- FullCalendar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="script.js"></script>
+</body>
+</html>

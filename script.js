@@ -218,40 +218,19 @@ document.addEventListener("DOMContentLoaded", () => {
   loadResponses();
 });
 
-// JavaScript for Modal Interactivity
-document.addEventListener("DOMContentLoaded", () => {
-  const members = document.querySelectorAll(".member");
-  const modal = document.getElementById("memberModal");
-  const modalName = document.getElementById("modal-name");
-  const modalRole = document.getElementById("modal-role");
-  const modalBio = document.getElementById("modal-bio");
-  const closeModal = document.querySelector(".modal .close");
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel-button.next');
+const prevButton = document.querySelector('.carousel-button.prev');
 
-  // Open modal when a member is clicked
-  members.forEach((member) => {
-    member.addEventListener("click", () => {
-      const name = member.getAttribute("data-name");
-      const role = member.getAttribute("data-role");
-      const bio = member.getAttribute("data-bio");
+let currentIndex = 0;
 
-      modalName.textContent = name;
-      modalRole.textContent = role;
-      modalBio.textContent = bio;
-
-      modal.style.display = "block";
-    });
-  });
-
-  // Close modal on click of "X"
-  closeModal.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  // Close modal when clicking outside of it
-  window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
 });
 
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+});
