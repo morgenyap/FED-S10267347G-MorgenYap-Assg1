@@ -95,9 +95,7 @@ These features are currently being considered for future updates and will enhanc
 ## Credits
 - **Content**: The text content for sections like the "Main Committee" was written by me, based on information from the FoodAID Club.
 - **Media**: The photos used on this website were sourced from the following links:
-  - **Instagram**: [FoodAID Club Instagram](https://www.instagram.com/npfoodaid/?hl=en)
-  - **Project 100=50 Event**: [Project 100=50](https://www.everylittlehelps.net/events/project-100-50)
-  - **Baey Yam Keng's Instagram**: [Baey Yam Keng Instagram](https://www.instagram.com/baeyyamkeng/p/CajC796JXw9/?img_index=3)
+- **FoodAID Telegram**: Posters from FoodAID's Telegram 
 - **My LinkedIn**: [Morgen Yap's LinkedIn](https://www.linkedin.com/in/morgen-yap/details/volunteering-experiences/)
 
 ## Acknowledgements
@@ -105,8 +103,8 @@ These features are currently being considered for future updates and will enhanc
 
 - Special thanks to ChatGPT (OpenAI) for providing guidance, suggestions, and assistance with coding, content structure, and troubleshooting during the development of this project.
 
-- I would also like to give a special shoutout to my fellow Basketballers. These amazing people, whom I met during RED Camp this year, have been a constant source of motivation for me. Their passion, dedication, and teamwork have truly inspired me to push myself further. From our shared experiences to the valuable lessons we’ve learned together, they’ve helped me realise the importance of teamwork and resilience, which I now carry forward in all my endeavors, including this project. I am grateful for their encouragement and friendship, which have played an important role in keeping me motivated and focused.
+- I would also like to give a special shoutout to my fellow Basketballerds. These amazing people, whom I met during RED Camp this year, have been a constant source of motivation for me. Their passion, dedication, and teamwork have truly inspired me to push myself further. From our shared experiences to the valuable lessons we’ve learned together, they’ve helped me realise the importance of teamwork and resilience, which I now carry forward in all my endeavors, including this project. I am grateful for their encouragement and friendship, which have played an important role in keeping me motivated and focused.
 
 ---
 
-Thank you for visiting the FoodAID Club Website. Let's work together to make a meaningful difference in our community! 
+Thank you for visiting my FoodAID Club Website.
