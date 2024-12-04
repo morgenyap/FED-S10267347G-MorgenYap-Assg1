@@ -117,7 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
       { title: "HRHS Food Distribution #1", start: "2024-09-07", colors: "#4B0076", url:"assets/posters/hrhs-food-dist-1.png"},
       { title: "Turning Flaws into Fresh Finds", start: "2024-11-16", color: "#FFC5D3", url:"assets/posters/turning-flaws-into-fresh-finds1.png"},
       { title: "Merry Baking Xmas", start: "2024-11-21", color: "#FF0000", url:"assets/posters/merry-baking-xmas.jpg"},
-      { title: "Main Committee Stepdown", start: "2025-01-03", color: "#FF0000"},
     ],
 
     
