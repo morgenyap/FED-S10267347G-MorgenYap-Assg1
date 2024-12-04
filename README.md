@@ -95,6 +95,7 @@ These features are currently being considered for future updates and will enhanc
 ## Credits
 - **Content**: The text content for sections like the "Main Committee" was written by me, based on information from the FoodAID Club.
 - **Media**: The photos used on this website were sourced from the following links:
+- **Profile Pictures**: [Vectors](https://www.vecteezy.com/vector-art/36280651-default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration)
 - **FoodAID Telegram**: Posters from FoodAID's Telegram 
 - **My LinkedIn**: [Morgen Yap's LinkedIn](https://www.linkedin.com/in/morgen-yap/details/volunteering-experiences/)
 
